@@ -1,0 +1,12 @@
+{
+  "name": "password-generator.js",
+  "version": "1.0.0",
+  "description": "Password Generator using javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["password", "password-generator", "javascript", "nodejs", "generator"],
+  "author": "Alexis Garcia - gh:@alexisg24",
+  "license": "MIT"
+}
