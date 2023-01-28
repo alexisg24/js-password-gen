@@ -1,6 +1,21 @@
 const crypto = require('crypto').webcrypto;
 
-//Options args { chars: boolean, upperCase: boolean, numbers: boolean, symbols: boolean}
+/**
+ * Type Def
+ * @typedef {object} options
+ * @property {boolean} chars
+ * @property {boolean?} upperCase
+ * @property {boolean?} numbers
+ * @property {boolean?} symbols
+ */
+
+/**
+ * Generate random password
+ * @param  {number} length number, default 8
+ * @param  {options} options { chars: boolean, upperCase?: boolean, numbers?: boolean, symbols?: boolean }
+ * @return  {string} Password String
+ */
+
 function generatePassword (length = 8, options){
     const charsObj = {
         chars: 'abcdefghijklmnopqrstuvwxyz',
@@ -13,11 +28,9 @@ function generatePassword (length = 8, options){
             if(value){
                 charsForGenerate += charsObj[key]
             }
-        }
-        
-    const array = new Uint32Array(length);
-    crypto.getRandomValues(array);
-    
+        }       
+   const array = new Uint32Array(length);
+    crypto.getRandomValues(array);  
     let password = '';
     for (let i = 0; i < length; i++) {
         password += charsForGenerate[array[i] % charsForGenerate.length]
@@ -25,8 +38,5 @@ function generatePassword (length = 8, options){
 
     return password
  }
-
- 
- generatePassword(16, { chars: true, upperCase: true, numbers: true, symbols: true})
 
  module.exports = generatePassword
