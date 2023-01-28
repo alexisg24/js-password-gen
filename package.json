@@ -1,5 +1,5 @@
 {
-  "name": "password-gen-js",
+  "name": "js-password-gen",
   "version": "1.0.0",
   "description": "Password Generator using javascript and nodejs",
   "main": "index.js",
@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "github",
-    "url": "https://github.com/alexisg24/password-gen-js"
+    "url": "https://github.com/alexisg24/js-password-gen"
   },
   "keywords": ["password", "password-generator", "javascript", "nodejs", "generator"],
   "author": "Alexis Garcia - gh:@alexisg24",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alexisg24/password-gen-js/issues"
+    "url": "https://github.com/alexisg24/js-password-gen/issues"
   },
-  "homepage": "https://github.com/alexisg24/password-gen-js#readme"
+  "homepage": "https://github.com/alexisg24/js-password-gen#readme"
 }

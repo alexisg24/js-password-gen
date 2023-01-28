@@ -1,24 +1,24 @@
-## password-gen-js
+## js-password-gen
 
 Password generator using JS
 
 
 ## Installation
 
-Install password-gen-js with npm
+Install js-password-gen with npm
 
 ```bash
   //Production dependencie
-  npm install password-gen-js
+  npm install js-password-gen
 
   //Developer dependencie
   npm install password-gen-js -D
 ```
 
-Using password-gen-js in code
+Using js-password-gen in code
 
 ```bash
-  const generatePassword = require("password-gen-js");
+  const generatePassword = require("js-password-gen");
   const password = generatePassword(length, options);
 
   /*
