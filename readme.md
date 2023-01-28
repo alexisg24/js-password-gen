@@ -12,7 +12,7 @@ Install js-password-gen with npm
   npm install js-password-gen
 
   //Developer dependencie
-  npm install password-gen-js -D
+  npm install js-password-gen -D
 ```
 
 Using js-password-gen in code
