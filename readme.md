@@ -1,6 +1,6 @@
 ## js-password-gen
 
-Password generator using JS
+Password generator using JS for NodeJS
 
 
 ## Installation
@@ -8,27 +8,44 @@ Password generator using JS
 Install js-password-gen with npm
 
 ```bash
-  //Production dependencie
-  npm install js-password-gen
+//Production dependencie
+npm install js-password-gen
 
-  //Developer dependencie
-  npm install js-password-gen -D
+//Developer dependencie
+npm install js-password-gen -D
 ```
 
-Using js-password-gen in code
+## Usage
+- NodeJS syntax
 
-```bash
+  ```javascript
   const generatePassword = require("js-password-gen");
   const password = generatePassword(length, options);
-
   /*
   length: Number,
   options: { chars: boolean, upperCase?: boolean, numbers?: boolean, symbols?: boolean }
   */
-```
+  ```
+- Example:
+  ```javascript
+  const generatePassword = require("js-password-gen");
+  const password = generatePassword(16, {chars: true, symbols: true, numbers: true, upperCase:true})
+  console.log(`password:`, password) //password: #YP]%#x]u3K:/Z0;
+  ```
 
+## length - Number
+- Type `number`
+- Default value: `8`
+- Max value: `32`
+## { options } - Object
 
-    
+| **Prop**          | **Type**   | **Description**                                                                                                                                                                                                                                                 | **Required** |
+| ----------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| chars           | `boolean`   | Include characters in your password.                                                                                                                                                                | ✅            |
+| upperCase           | `boolean`   | Include upper case characters in your password.                                                                                                                                       |              |
+| numbers     | `boolean`   | Include numbers in your password. |              |
+| symbols         | `boolean` | Include symbols in your password.                                                                                                                                                   |              | 
+
 ## Authors
 
 - [@alexisg24](https://www.github.com/alexisg24)
