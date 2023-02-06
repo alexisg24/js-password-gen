@@ -19,6 +19,7 @@ npm install js-password-gen -D
 - NodeJS syntax
 
   ```javascript
+  //@ts-check
   const generatePassword = require("js-password-gen");
   const password = generatePassword(length, options);
   /*
@@ -28,6 +29,7 @@ npm install js-password-gen -D
   ```
 - Example:
   ```javascript
+  //@ts-check
   const generatePassword = require("js-password-gen");
   const password = generatePassword(16, {chars: true, symbols: true, numbers: true, upperCase:true})
   console.log(`password:`, password) //password: #YP]%#x]u3K:/Z0;
@@ -36,7 +38,7 @@ npm install js-password-gen -D
 ## length - Number
 - Type `number`
 - Default value: `8`
-- Max value: `32`
+- Max value: `64`
 ## { options } - Object
 
 | **Prop**          | **Type**   | **Description**                                                                                                                                                                                                                                                 | **Required** |

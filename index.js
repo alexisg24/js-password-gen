@@ -1,19 +1,14 @@
+//@ts-check
 const crypto = require('crypto').webcrypto;
-
-/**
- * Type Def
- * @typedef {object} options
- * @property {boolean} chars
- * @property {boolean?} upperCase
- * @property {boolean?} numbers
- * @property {boolean?} symbols
- */
-
 /**
  * Generate random password
  * @param  {number} length number, default: 8; max: 32
- * @param  {options} options { chars: boolean, upperCase?: boolean, numbers?: boolean, symbols?: boolean }
- * @return  {string} Password String
+ * @param  {Object} options Options Object: { chars, upperCase?, numbers?, symbols? }
+ * @param {boolean} options.chars
+ * @param {boolean} [options.upperCase=false]
+ * @param {boolean} [options.numbers=false]
+ * @param {boolean} [options.symbols=false]
+ * @returns  {string} Password String
  */
 
 function generatePassword (length = 8, options){
@@ -24,8 +19,8 @@ function generatePassword (length = 8, options){
         symbols: '!@#$%^&*()_+~`|}{[]\:;?><,./-=',
     }
 
-    if(Number(length) > 32){
-        length = 32;
+    if(Number(length) > 64){
+        length = 64;
     }
 
     let charsForGenerate = '';
